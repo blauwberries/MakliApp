@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makli | E-mailbeheer voor Makelaars</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .guarantee-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        
+                        <span class="text-xl font-bold text-indigo-600">Makli</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Functies</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Hoe het werkt</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Ervaringen</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Prijzen</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#cta" class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                    <span class="block">Stop met verdrinken in e-mails</span>
+                    <span class="block text-indigo-200">Laat AI het werk doen</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-indigo-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Makli helpt makelaarskantoren automatisch e-mails te organiseren en te beantwoorden, terwijl uw persoonlijke stijl behouden blijft. Win elke dag uren tijd terug zonder kwaliteit in te leveren.
+                </p>
+                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <!-- <div class="rounded-md shadow">
+                        <a href="#cta" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                            Probeer 14 dagen gratis
+                        </a>
+                    </div> -->
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <a href="#how-it-works" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                            Bekijk hoe het werkt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Badges
+    <div class="bg-gray-50">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+                Vertrouwd door makelaars in heel Nederland
+            </p>
+            <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Problem Section -->
+    <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                E-mailoverlast is een echt probleem voor makelaars
+            </h2>
+            <p class="mt-4 text-lg text-gray-500">
+                Tussen huurdersvragen, verhuurderupdates en woningvragen is uw inbox een fulltime baan geworden. U bent makelaar geworden om met vastgoed bezig te zijn, niet om e-mails te beheren.
+            </p>
+            <div class="mt-12">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                                        <i class="fas fa-inbox text-white text-2xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Overweldigend volume</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Tientallen e-mails per dag van klanten, verhuurders en huurders die allemaal een antwoord nodig hebben.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                                        <i class="fas fa-clock text-white text-2xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Tijdrovend</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Uren verspild aan repetitieve antwoorden in plaats van uw bedrijf te laten groeien.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Jouw Slimme Assistent
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Wij regelen het routinewerk zodat u zich kunt richten op wat belangrijk is: uw klanten en panden.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="feature-card transition-all duration-300 ease-in-out rounded-lg bg-white p-8 shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i class="fas fa-tags text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Slimme e-mailorganisatie</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Het model categoriseert en labelt inkomende e-mails automatisch op type (vraag, onderhoudsverzoek, huurvraag, etc.) zodat u prioriteiten kunt stellen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card transition-all duration-300 ease-in-out rounded-lg bg-white p-8 shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i class="fas fa-reply text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Contextbewuste conceptantwoorden</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Ons model maakt gepersonaliseerde antwoorden op basis van de e-mailinhoud, eerdere gesprekken en uw aangeleverde bestanden (zoals verhuuderslijst en huurderslijst)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card transition-all duration-300 ease-in-out rounded-lg bg-white p-8 shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i class="fas fa-user-shield text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Menselijke controle</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Elk model antwoord wordt door u gecontroleerd en goedgekeurd voor verzending, zodat kwaliteit en persoonlijke stijl gewaarborgd blijven.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div id="how-it-works" class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="lg:text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Hoe Makli werkt
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Eenvoudige integratie met je bestaande e-mail
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <span class="text-xl font-bold">1</span>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Verbind je Email</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Verbind Outlook-account veilig in minder dan 2 minuten. Wij slaan je inloggegevens nooit op.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <span class="text-xl font-bold">2</span>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Het model gaat aan het werk</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Ons model analyseert binnenkomende e-mails, categoriseert ze en stelt conceptantwoorden op gebaseerd op jouw eerdere communicatie.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <span class="text-xl font-bold">3</span>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Beoordelen & Verzenden</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Je bekijkt, bewerkt indien nodig, en keurt reacties goed met één klik. Of schrijf je eigen antwoord wanneer je dat liever hebt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Human Touch Section -->
+    <div class="bg-indigo-700">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="relative rounded-lg overflow-hidden">
+                <div class="absolute inset-0">
+                    <img class="w-full h-full object-cover opacity-10" src="https://images.unsplash.com/photo-1521737711867-e3b97374fded?ixlib=rb-1.2.1&auto=format&fit=crop&w=1580&q=80" alt="">
+                </div>
+                <div class="relative px-6 py-16 sm:py-24 lg:py-32 lg:px-8">
+                    <div class="text-center">
+                        <div class="guarantee-badge inline-flex items-center px-6 py-3 bg-white rounded-full shadow-lg">
+                            <i class="fas fa-handshake text-indigo-600 mr-2"></i>
+                            <span class="font-bold text-indigo-600">Human-in-the-Loop Guarantee</span>
+                        </div>
+                        <h2 class="mt-6 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                             Menselijk oordeel
+                        </h2>
+                        <p class="mt-6 max-w-lg mx-auto text-xl text-indigo-100">
+                            Wij geloven dat technologie je bedrijf moet versterken, niet jouw expertise moet vervangen. Daarom vraagt elk door het model gegenereerd antwoord jouw goedkeuring voordat het wordt verzonden.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-green-400 text-2xl mr-2"></i>
+                                <span class="text-white font-medium">Menselijke antwoorden</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-green-400 text-2xl mr-2"></i>
+                                <span class="text-white font-medium">Behoud je authenticiteit</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-green-400 text-2xl mr-2"></i>
+                                <span class="text-white font-medium">Volledige controle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Wat vastgoedprofessionals zeggen
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Geloof ons niet zomaar, hoor wat makelaars zeggen die hun tijd terugkregen.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-lg p-8">
+                    <div class="flex items-center">
+                        <!-- <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80" alt=""> -->
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Sarah van Eijk</h4>
+                            
+                        </div>
+                    </div>
+                    <p class="mt-6 text-gray-600">
+                        Ik was dagelijks 3 uur kwijt aan e-mails. Nu bekijk ik concepten in 30 minuten en heb ik tijd om echt met klanten af te spreken. Makli is een echte doorbraak voor mijn kleine bureau.
+                    </p>
+                    <div class="mt-6 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-lg p-8">
+                    <div class="flex items-center">
+                        <!-- <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80" alt=""> -->
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Michael Chen</h4>
+                            
+                        </div>
+                    </div>
+                    <p class="mt-6 text-gray-600">
+                        Het model begrijpt vastgoedjargon beter dan ik had verwacht. Het verwijst correct naar eigenschapsgegevens en behoudt een professionele toon die bij mijn merk past.
+                    </p>
+                    <div class="mt-6 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-lg p-8">
+                    <div class="flex items-center">
+                        <!-- <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80" alt=""> -->
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">David Notenboom</h4>
+                    
+                        </div>
+                    </div>
+                    <p class="mt-6 text-gray-600">
+                        Wat mij overtuigde, was de stap met menselijke controle. Ik profiteer van alle tijdsbesparing van automatisering zonder me zorgen te maken over het versturen van iets ongepasts. Mijn stressniveau is aanzienlijk gedaald.
+                    </p>
+                    <div class="mt-6 flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <div id="pricing" class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Weer grip op je inbox
+                </h2>
+                <!-- <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Betaal alleen voor wat je nodig hebt. Geen contracten, altijd opzegbaar.
+                </p> -->
+            </div>
+
+            <div class="mt-16 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0">
+                <!-- Basic Plan -->
+                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-white">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Starter</h3>
+                        <p class="mt-4 text-sm text-gray-500">
+                            Perfect voor zelfstandige makelaars of kleine teams
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">Stuur ons een email</span>
+                            <span class="text-base font-medium text-gray-500"></span>
+                        </p>
+                        <a href="#cta" class="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-3 text-sm font-medium text-white text-center hover:bg-gray-900">
+                            Start
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h4 class="sr-only">Kenmerken</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Tot 500 emails/maand</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Slimme categorisering</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Conceptemails</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">1 email account</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="border border-indigo-500 rounded-lg shadow-sm divide-y divide-gray-200 bg-white">
+                    <div class="p-6">
+                        <div class="flex justify-between">
+                            <h3 class="text-lg font-medium text-gray-900">Agency</h3>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Most Popular
+                            </span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">
+                            Voor groeiende vastgoedteams
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">Stuur ons een mail</span>
+                            <span class="text-base font-medium text-gray-500"></span>
+                        </p>
+                        <a href="#cta" class="mt-8 block w-full bg-indigo-600 border border-indigo-600 rounded-md py-3 text-sm font-medium text-white text-center hover:bg-indigo-700">
+                            Begin nu
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h4 class="sr-only">Kenmerken</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Tot 1,500 emails/maand</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Alles in starter</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">3 email accounts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-base text-gray-700">Prioriteitsondersteuning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div id="cta" class="bg-indigo-700">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    <span class="block">Klaar om je tijd terug te winnen?</span>
+                    <span class="block">Stuur ons een email</span>
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-indigo-100 mx-auto">
+                    Annuleer op elk moment
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
+                            Stuur ons een email
+                            <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 flex items-center justify-center">
+                    <i class="fas fa-lock text-indigo-200 mr-2"></i>
+                    <span class="text-sm text-indigo-200">256-bit encryption. GDPR compliant.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center">
+                Frequently Asked Questions
+            </h2>
+            <div class="mt-12 space-y-6">
+                <!-- FAQ Item 1 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">Hoe begrijpt het model vastgoedterminologie?</span>
+                            <i :class="{'transform rotate-180': open}" class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </div>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-500">
+                        <p>Ons model is speciaal getraind op duizenden vastgoedcommunicaties, waaronder huurovereenkomsten, vragen over panden, onderhoudsverzoeken en meer. Het begrijpt termen zoals "VvE-goedkeuring" of "borg" en kan bij het opstellen van antwoorden verwijzen naar de specifieke gegevens van jouw pand.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">Welke e-mailproviders ondersteunen jullie?</span>
+                            <i :class="{'transform rotate-180': open}" class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </div>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-500">
+                        <p>We ondersteunen momenteel Outlook/Office 365. We maken gebruik van beveiligde OAuth-verbindingen, waardoor we je wachtwoord nooit zien of opslaan.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">Kan ik de schrijfstijl van het model aanpassen?</span>
+                            <i :class="{'transform rotate-180': open}" class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </div>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-500">
+                        <p>Absoluut! Je kunt voorkeuren instellen voor toon (professioneel versus informeel), de lengte van antwoorden en zelfs veelgebruikte zinnen toevoegen. Het model leert van je aanpassingen om na verloop van tijd beter aan te sluiten bij jouw natuurlijke communicatiestijl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Product</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#features" class="text-base text-gray-300 hover:text-white">Features</a></li>
+                        <li><a href="#pricing" class="text-base text-gray-300 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">API</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Terms</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">GDPR</a></li>
+                    </ul>
+                </div> -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2025 Makli. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Alpine JS for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>
+
+
